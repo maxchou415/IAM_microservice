@@ -1,0 +1,36 @@
+{
+  "name": "iam_auth",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/maps": "^1.1.0",
+    "@koa/router": "^8.0.2",
+    "config": "^3.1.0",
+    "debug": "^2.6.3",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-views": "^5.2.1",
+    "koa2-cors": "^2.0.6",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.0.1",
+    "sequelize": "^5.8.6",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1",
+    "sequelize-cli": "^5.5.1"
+  }
+}
