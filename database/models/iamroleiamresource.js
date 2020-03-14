@@ -1,16 +1,14 @@
 'use strict'
 module.exports = (sequelize, DataTypes) => {
   const IAMRoleIAMResource = sequelize.define('IAMRoleIAMResource', {
-    iamResourceId: {
-      type: DataTypes.STRING,
-      field: 'iam_resource_id'
+    IamResourceId: {
+      type: DataTypes.INTEGER
     },
-    iamRoleId: {
-      type: DataTypes.STRING,
-      field: 'iam_role_id'
+    IamRoleId: {
+      type: DataTypes.INTEGER
     }
   }, {
-    tableName: 'iam_role_iam_resource'
+    tableName: 'IAMRoleIAMResource'
   })
   IAMRoleIAMResource.associate = function (models) {
     // associations can be defined here

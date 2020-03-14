@@ -1,17 +1,17 @@
 'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('iam_role_iam_resource', {
+    return queryInterface.createTable('IAMRoleIAMResource', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        type: Sequelize.INTEGER
       },
-      iam_resource_id: {
+      IAMResourceId: {
         type: Sequelize.STRING
       },
-      iam_role_id: {
+      IAMRoleId: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -25,6 +25,6 @@ module.exports = {
     })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('iam_role_iam_resource')
+    return queryInterface.dropTable('IAMRoleIAMResource')
   }
 }
