@@ -1,12 +1,12 @@
 'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('iam_resources', {
+    return queryInterface.createTable('IAMResources', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        type: Sequelize.INTEGER
       },
       path: {
         type: Sequelize.STRING
@@ -25,6 +25,6 @@ module.exports = {
     })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('iam_resources')
+    return queryInterface.dropTable('IAMResources')
   }
 }
