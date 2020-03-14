@@ -1,5 +1,5 @@
 require('dotenv').config()
-// require('module-alias/register')
+require('module-alias/register')
 
 const Koa = require('koa')
 const app = new Koa()
