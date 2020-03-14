@@ -1,4 +1,5 @@
 const { getIAMRolesByIAMGroupId } = require('../services')
+const errorMessageMap = require('../../infra/utils/responseHandlers/errorMessageMap')
 
 module.exports = async (ctx, next) => {
   const IAMGroupId = ctx.params.groupId
@@ -7,7 +8,13 @@ module.exports = async (ctx, next) => {
   try {
     data = await getIAMRolesByIAMGroupId(IAMGroupId)
   } catch (error) {
+    ctx.throw(errorMessageMap.FETCH_IAM_GROUP_ROLES_FAIULRED)
+    return
+  }
 
+  if (data.length === 0) {
+    ctx.throw(errorMessageMap.FETCH_IAM_GROUP_ROLES_NO_CONTAIN_ROLE)
+    return
   }
 
   ctx.status = 200
