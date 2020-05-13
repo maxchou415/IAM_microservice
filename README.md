@@ -1,1 +1,3 @@
-iam-auth
+The IAM-Auth project is a project that partly implements AWS IAM. You can also know that it is a microservice that implements policy-based routing (PBR, This PBR is not that PBR in MIS XD).
+
+Sometimes, we need to build a role-based middleware to verify the identity each request, but the role is flexible so we cannot just hard-code it in the codebase. but rebuilding this service every single time is not necessary. So here is it - `IAM-Auth`.
