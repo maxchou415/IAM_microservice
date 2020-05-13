@@ -1,6 +1,17 @@
 module.exports = {
   app: {
-    name: 'iam_auth'
+    name: 'iam_auth',
+    api: {
+      newResources: {
+        actions: [
+          'GET',
+          'POST',
+          'PATCH',
+          'PUT',
+          'DELETE'
+        ]
+      }
+    }
   },
   database: {
     username: process.env.DB_USER,
